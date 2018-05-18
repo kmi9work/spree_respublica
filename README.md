@@ -13,4 +13,4 @@ rake spree_sample:load
 rake db:seed:load_data
 ```
 
-*Run `rails s`
+* Run `rails s`
