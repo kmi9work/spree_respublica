@@ -1,0 +1,10 @@
+<form class="navbar-form">
+  <div class="form-group">
+    <%= select_tag :geolocation,
+          options_from_collection_for_select(@stores, "id", "name", 
+            session[:current_store_id] || spree_current_user.try(:store).try(:id) || @stores.first[1]), 
+            'aria-label' => 'Taxon', 
+            class: "form-control", 
+            id: "geolocation-select" %>
+  </div>
+</form>

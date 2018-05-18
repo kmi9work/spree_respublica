@@ -12,7 +12,7 @@
       <div class="panel-footer text-center">
         <span itemprop="offers" itemscope itemtype="https://schema.org/Offer">
           <span class="price selling lead" itemprop="price" content="<%= product.price_in(current_currency).amount.to_d %>">
-            <%= display_price(product) %>
+            <%= display_price(product.store_variant(session[:current_store_id])) %>
           </span>
           <span itemprop="priceCurrency" content="<%= current_currency %>"></span>
         </span>

@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   #
   # We ask that you don't use the :as option here, as Spree relies on it being
   # the default of "spree".
+  post '/geolocation_get', to: 'geolocation#get'
+  post '/geolocation_set', to: 'geolocation#set'
+  
   mount Spree::Core::Engine, at: '/'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
