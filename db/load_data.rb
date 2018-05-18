@@ -33,7 +33,8 @@ index = 100
     option_values: [options[rand(options.count)], colors[rand(colors.count)]],
     sku: "ROR-000#{index+i}",
     cost_price: rand(30)+5,
-    store_id: rand(10)
+    store_id: rand(10),
+    price: rand(30)+5,
   }
   Spree::Variant.create!(variant) if Spree::Variant.where(product_id: variant[:product].id, sku: variant[:sku]).none?
 end
