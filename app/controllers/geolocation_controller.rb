@@ -7,6 +7,7 @@ class GeolocationController < ApplicationController
 
     unless session[:current_store_id]
       Spree::Store.all.each do |store|
+        next unless (store.latitude and store.longitude)
         d = distance(user_latitude, user_longitude, store.latitude, store.longitude)
         min_distance ||= d 
         min_store_id ||= store.id
