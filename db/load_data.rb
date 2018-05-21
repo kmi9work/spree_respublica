@@ -1,3 +1,8 @@
+Spree::Store.first.update({
+	latitude: 55.6498661 + 2*rand - 1,
+  longitude: 37.606152 + 2*rand - 1
+})
+
 10.times do |i|
   Spree::Store.create({
     name: "Store#{i}",
